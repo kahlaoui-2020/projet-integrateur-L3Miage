@@ -1,0 +1,153 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-sm-right"> 
+            <img src="https://i.pinimg.com/236x/e8/9d/fe/e89dfe5ba49713f4add95ade04b27c5b.jpg" />
+         </div>
+        <div class="col-sm-right"> 
+            style="margin-left: 500px; margin-right: 500px;"
+        style="margin-left: 90px;"-->
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+            
+
+                </div>
+                <div class="col-sm-8">
+                    <div style="padding-bottom: 20px;">
+                        <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+                            <div class="card-header">
+                                <h1 class="card-title text-center">Se connecter</h1>
+                            </div>
+                        <div class="card-body" >
+                            <h4 class="card-text" style="margin-left: 17px;" >Avec ton compte</h4>
+                            <div class="login100-form-social flex-c-m">
+                            
+                                <button routerLink="/movies" class="login100-form-social-item flex-c-m bg3 m-r-5"
+                                    (click)='loginGoogle()'>
+                                    <i class="fa fa-google" aria-hidden="true"></i>
+                                </button>
+                                <button routerLink="/movies" class="login100-form-social-item flex-c-m bg1 m-r-5"
+                                (click)='facebookLogin()'>
+                                    <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                                </button>
+                
+                                <button routerLink="/movies" class="login100-form-social-item flex-c-m bg2 m-r-5"
+                                    (click)='twitterLogin()'>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <form class="form-signin" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+                                
+                                <!-- <img class="mb-4" src="" alt="" width="72" height="72"> -->
+                                <h4 class="card-text" >Connexion</h4>
+                                
+                                <label for="inputEmail" class="sr-only">Adresse Email</label>
+                                <input type="email" id="inputEmail" class="form-control" formControlName="email"
+                                    placeholder="Adresse Email" required autofocus>
+                                <label for="inputPassword" class="sr-only">Mot de passe</label>
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required
+                                    formControlName="password">
+                                <!-- <div class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Se rappeler de moi
+                                    </label>
+                                </div> -->
+                                <button class="btn btn-lg btn-secondary btn-block" type="submit"
+                                    [disabled]="signInForm.invalid">Connexion</button>
+                                <p class="text-danger">{{errorMessage}}</p>
+                            </form> 
+                
+                        </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+            
+
+        <!-- </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <button (click)='loginGoogle()'>Connectez-vous</button> -->
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form class="login100-form validate-form" [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+    <span class="login100-form-title p-b-43">
+        Login to continue
+    </span>
+    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+        <input class="input100" type="text" name="email" id="email" formControlName="email">
+        <span class="focus-input100"></span>
+        <span class="label-input100">Email</span>
+    </div>
+
+
+    <div class="wrap-input100 validate-input" data-validate="Password is required">
+        <input class="input100" type="password" name="pass" id="password" formControlName="password">
+        <span class="focus-input100"></span>
+        <span class="label-input100">Password</span>
+    </div>
+
+    <div class="flex-sb-m w-full p-t-3 p-b-32">
+        <div class="contact100-form-checkbox">
+            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+            <label class="label-checkbox100" for="ckb1">
+                Se rappeler de moi
+            </label>
+        </div>
+
+        <div>
+            <a href="#" class="txt1">
+                Mot de passe oublié?
+            </a>
+        </div>
+    </div>
+
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn" [disabled]="signInForm.invalid">
+            Connexion
+        </button>
+    </div>
+
+    <div class="text-center p-t-46 p-b-20">
+        <span class="txt2">
+            Ou Se connecter avec
+        </span>
+    </div>
+
+    
+</form> -->

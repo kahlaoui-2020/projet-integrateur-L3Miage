@@ -1,0 +1,69 @@
+
+            
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                
+    
+                    </div>
+                    <div class="col-sm-8">
+                        <div style="padding-bottom: 20px;">
+                            <div class="card text-white bg-warning mb-3" style="width: 18rem;">
+                                <div class="card-header">
+                                    <h1 class="card-title text-center">Inscription</h1>
+                            </div>
+                        <div class="card-body" >
+                            <h4 class="card-text " style="margin-left: 17px;">Avec ton compte</h4>
+            <div class="login100-form-social flex-c-m" >
+                <button  class="login100-form-social-item flex-c-m bg3 m-r-5" (click)='loginGoogle()'>
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                </button>
+                <button  class="login100-form-social-item flex-c-m bg1 m-r-5"
+                (click)='facebookLogin()'>
+                    <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                </button>
+
+                <button class="login100-form-social-item flex-c-m bg2 m-r-5"
+                    (click)='twitterLogin()'>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </button>
+            </div>
+            <form class="form-signin" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+                <h4 class="card-text" >Créer un compte</h4>
+                <!-- <img class="mb-4" src="" alt="" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">Créer un compte</h1>  -->
+                <label for="inputEmail" class="sr-only">Adresse Email</label>
+                <input type="email" id="inputEmail" class="form-control" formControlName="email" placeholder="Adresse Email" required autofocus>
+                <label for="inputPassword" class="sr-only">Mot de passe</label>
+                <input type="password" id="inputPassword" class="form-control"  formControlName="password"  placeholder="Mot de passe" required >
+                
+                <button class="btn btn-lg btn-secondary btn-block" type="submit" [disabled]="signUpForm.invalid">Créer un compte</button>
+                <p class="text-danger">{{errorMessage}}</p>
+              </form>
+            </div>
+        </div>
+        </div>
+</div>
+</div>
+            </div>
+        
+        
+        
+   
+
+<!-- <button (click)='loginGoogle()'>Connectez-vous</button> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+

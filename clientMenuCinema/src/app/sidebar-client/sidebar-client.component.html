@@ -1,0 +1,376 @@
+
+
+  <div class="container" style="margin-bottom: 100px;">
+    <div class="row">
+      <div class="col-md-3 ">
+           <div class="list-group ">
+                <a  class="list-group-item list-group-item-action active text-center text-white"><h4>COMPTE CLIENT</h4> </a>
+                <div class="list-group-item list-group-item-action text-center">
+                  <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"
+                    style="max-width: 150px; max-height: 150px;">
+
+
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input custom-file-text-small" id="customFileLang" lang="fr-FR">
+                      <label class="custom-file-label text-left" style="margin-right: 0px;" for="customFileLang">Votre photo</label>
+                    </div>
+
+
+                  <!-- <h6>Ajouter une image</h6>
+                  <input type="file" class="text-center center-block file-upload"> -->
+                </div>
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a style="cursor: pointer;" id="profil-tab" 
+                    class="nav-link list-group-item list-group-item-action active" 
+                    data-toggle="pill"  href="#profil" role="tab" aria-controls="profil" aria-selected="true">Profil</a>
+                <a style="cursor: pointer;"  id="commandeCourante-tab"
+                    class="nav-link list-group-item list-group-item-action"  
+                    data-toggle="pill"  href="#commandeCourante" role="tab" aria-controls="commandeCourante" aria-selected="false">Commande courante</a>
+               <a style="cursor: pointer;"  id="listeCommande-tab"
+                  class="nav-link list-group-item list-group-item-action" 
+                  data-toggle="pill"  href="#listeCommande" role="tab" aria-controls="listeCommande" aria-selected="false">Liste des commandes</a>   <!--  les commandes seront suivi de leur factures  -->
+                <a style="cursor: pointer;"  id="parametre-tab"
+                    class="nav-link list-group-item list-group-item-action" 
+                    data-toggle="pill"  href="#parametre" role="tab" aria-controls="parametre" aria-selected="false">Paramètres</a>
+              </div>
+                <!-- <a href="#" class="list-group-item list-group-item-action">Paramètres</a> -->                
+              </div> 
+      </div>
+      
+      <div class="col-md-9">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade card show active" role="tabpanel" aria-labelledby="profil-tab" id="profil">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-md-12">
+                          <h4>Profil</h4>
+                          <hr>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <form >
+                                <div class="form-group row">
+                                  <label for="nom" class="col-4 col-form-label">Nom*</label> 
+                                  <div class="col-8">
+                                    <input id="nom" name="nom" placeholder="Votre nom" class="form-control here" type="text"
+                                          [(ngModel)]="client.nom">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="prenom" class="col-4 col-form-label">Prenom*</label> 
+                                  <div class="col-8">
+                                    <input id="prenom" name="prenom" placeholder="Votre prenom" class="form-control here" type="text"
+                                          [(ngModel)]="client.prenom">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="adresse" class="col-4 col-form-label">Adresse*</label> 
+                                  <div class="col-8">
+                                    <input id="adresse" name="adresse" placeholder="adresse" class="form-control here" required="required" 
+                                              [(ngModel)]="client.adresse"type="text">
+                                  </div>
+                                </div>
+                                
+                                <div class="form-group row">
+                                  <label for="email" class="col-4 col-form-label">Email*</label> 
+                                  <div class="col-8">
+                                    <input id="email" name="email" placeholder="Email" class="form-control here" required="required" disabled 
+                                                  [(ngModel)]="client.email"type="text">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="points" class="col-4 col-form-label">Points de fidélité</label> 
+                                  <div class="col-8">
+                                    <input id="points" name="points" placeholder="0" class="form-control here" disabled type="text"
+                                              [(ngModel)]="client.point">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <div class="offset-4 col-8">
+                                    <button name="submit" type="submit" class="btn btn-primary">Mettre à jour le profil</button>
+                                  </div>
+                                </div>
+                              </form>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+      
+    
+      <div class="tab-pane fade card"  role="tabpanel" aria-labelledby="commandeCourante-tab" id="commandeCourante" >
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12">
+              <h4>Finaliser la commande encours</h4>
+              <hr>
+          </div>
+           <div>
+            <form class="form" [formGroup]="commandeForm" (ngSubmit)="onSaveCommande()">
+              <div class="form-group form-inline" >
+                <div class="form-group">
+                  <!-- <div class="form-group"> -->
+                    
+                      <label class="my-1 mr-2" for="nos-films">Nos Films</label>
+                      <input class="form-control" id="quantiteFilm" name="quantiteFilm" formControlName="quantiteFilm" 
+                              type="text" placeholder="saisir une quantité" size="10">
+                      
+                
+                    <select   class="form-control" name="idFilm" formControlName="idFilm">
+                      <option selected  ></option> 
+                      <option *ngFor="let film of lesfilms "  [value]="getFilmTitre(film)"
+                          id="idFilm" formControlName="idFilm" >{{getFilmTitre(film)}}</option>
+                    </select>
+             
+                      
+                   
+                
+                </div>
+                <div class="form-group">
+              
+                    
+                      <label class="my-1 mr-2" for="nos-plats" >Nos Plats</label>
+                      <input class="form-control" id="quantitePlat" name="quantitePlat" formControlName="quantitePlat" 
+                              type="text" placeholder="saisir une quantité" size="10">
+                     
+                 
+                        <select   class="form-control" name="idPlat" formControlName="idPlat">
+                          <option selected  ></option> 
+                          <option *ngFor="let film of lesfilms "  [value]="getFilmTitre(film)"
+                              id="idPlat" formControlName="idPlat" >{{getFilmTitre(film)}}</option>
+                        </select>
+                
+                      
+                       
+                  
+             
+                   
+                </div>
+                <div class="form-group">
+                  <label class="my-1 mr-2" for="adresse">Adresse de livraison</label>
+                       <textarea type="textarea" class="form-control" rows="4" name="adresse" id="adresse" formControlName="adresse"
+                                  placeholder="Votre adresse de livraison"></textarea>
+                </div>
+                
+             
+              </div>
+              <div class="form-group">
+                <button type="submit" (click)="trouver()" class="btn btn-info my-1">Ajouter une ligne</button>
+              </div>
+            </form>
+              <div class="responsive-table-line" style="margin:0px auto;max-width:700px;">
+                <table class="table table-bordered table-condensed table-body-center"  >
+                <thead>
+                <tr>
+                <th>Item</th>
+                <th>Articles</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+                <th>Montant</th>
+                <th>Options</th>
+                </tr>
+                </thead>
+                <tbody  *ngFor="let commande of totalCommande; let i=index">
+                <tr  >
+                <td data-title="Item"> {{i+1}}</td>
+                <td data-title="Articles">{{commande.film.idFilm}} </td>
+                <td data-title="Prix">10 </td>
+                <td data-title="Quantité"> {{commande.film.quantiteFilm}} </td>
+                <td data-title="Montant">10 </td>
+                <td data-title="Options" colspan="2"><button class="btn btn-danger" (click)="onDeleteCommandeFilm(commande.film)">Supprimer</button></td>
+
+                </tr>
+                <tr >
+                  <td data-title="Item" > {{i+1}}</td>
+                  <td data-title="Articles" >{{commande.plat.idPlat}} </td>
+                  <td data-title="Prix" >10 </td>
+                  <td data-title="Quantité" > {{commande.plat.quantitePlat}} </td>
+                  <td data-title="Montant" >10 </td>
+                  <td data-title="Options" ><button class="btn btn-danger" (click)="onDeletCommandePlat(commande.plat)">Supprimer</button></td>
+                  </tr>
+                
+                
+                 </tbody>
+                </table>
+                </div>
+            
+              
+            
+              <button type="submit" class="btn btn-primary my-1" [disabled]="commandeForm.invalid" (click)="commandeValider()">Valider la commande</button>
+            
+           </div>
+          </div>
+          
+        </div>
+        
+      </div>
+     
+      <div class="tab-pane fade card" role="tabpanel" aria-labelledby="listeCommande-tab" id="listeCommande" >
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12">
+              <h4>Voici la liste de vos commandes</h4>
+              <hr>
+          </div>
+          <div class="responsive-table-line" style="margin:0px auto;max-width:700px;">
+            <table class="table table-bordered table-condensed table-body-center" >
+            <thead>
+            <tr>
+            <th>Item</th>
+            <th>Désignation</th>
+            <!-- <th>Date</th> -->
+            <th>Adresse</th>
+            <th>Montant TTC</th>
+            <th>Options</th>
+            </tr>
+            </thead>
+            <tbody >
+            <tr  *ngFor="let commande of lesCommandes; let i=index" id="id">
+              
+            <td data-title="Item">{{i+1}}</td>
+            <td data-title=" Désignation">Commande du {{commande.date}}</td>
+            <!-- <td data-title="Date">{{lesCommandes.numCommande}}</td> -->
+            <td data-title="Adresse">{{commande.adresseLivraison}}</td>
+            <td data-title="Montant TTC">{{commande.prix}}</td>
+            <td data-title="Options"> <div class="btn-group">
+              <button class="btn btn-success"  (click)="afficheDetail()">Consulter</button>
+              <button class="btn btn-warning"  (click)="afficherTrue()">Facture</button> </div></td>
+
+                                      
+            </tr>
+            <!-- (click)="open('autofocus')"  (click)="open('focusFirst')"-->
+             
+             </tbody>
+            </table>
+            <div *ngIf="afficher == true" >
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-title">Facture de la commande</h4>
+                <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="onClose()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+              <div>
+                <p><strong>Facture N° 452525225.</strong> </p><p><strong class="text-right"> Client : _________ </strong> </p>
+                <p><strong>Date : 04/05/2020.</strong> </p> <p><strong class="text-right"> Adresse : _________ </strong> </p>
+              </div>
+                <table class="table table-bordered table-condensed table-body-center">
+                  <thead>
+                    <tr>
+                      <td>Item</td>
+                      <td>Articles</td>
+                      <td>Qte</td>
+                      <td>PU</td>
+                      <td>Montant</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                  <td>Item</td>
+                  <td>Articles</td>
+                  <td>Qte</td>
+                  <td>PU</td>
+                  <td>Montant</td>
+                </tr>
+                  </tbody>
+                </table>
+                <p class="text-right"><strong class="text-danger" >Total HT : ______.</strong>
+                </p>
+                <p class="text-right"><strong class="text-danger">TVA : ______.</strong>
+                </p>
+                <p class="text-right"><strong class="text-danger">Total TTC : ______.</strong>
+                </p>
+              </div>
+            </div>
+                
+              
+            <div *ngIf="afficherD == true">
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-title">Les détails de la commande</h4>
+                <button type="button" class="close" aria-describedby="modal-title" (click)="onClose()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" >
+              <table class="table table-bordered table-condensed table-body-center">
+              <thead>
+                <tr >
+                  <td>Item</td>
+                  <td>Articles</td>
+                  <!-- <td>Qte</td>
+                  <td>PU</td>
+                  <td>Montant</td> -->
+                </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let commande of lesCommandes; let i = index">
+              <td *ngIf="getDetail() == i" >{{i+1}}</td>
+              <td *ngIf="getDetail() == i">{{commande.idFilm}} <br/> {{commande.idPlat}}</td>
+              <!-- <td *ngIf="getIndex() == i">1 <br/> 1</td> -->
+              <!-- <td>PU</td> -->
+              <!-- <td>Montant</td> -->
+            </tr>
+              </tbody>
+            </table>
+              </div>
+            </div> 
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="tab-pane fade card"  role="tabpanel" aria-labelledby="parametre-tab" id="parametre" >
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12">
+              <h4>Changer son mot de passe</h4>
+              <hr>
+          </div>
+          <form >
+              <div class="form-group row">
+                <label for="passwordAncien" class="col-4 col-form-label">Ancien mot de passe</label> 
+                <div class="col-8">
+                  <input id="passwordAncien" name="passwordAncien" placeholder="Ancien mot de passe" class="form-control here" type="password">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="passwordNouveau" class="col-4 col-form-label">Nouveau mot de passe</label> 
+                <div class="col-8">
+                  <input id="passwordNouveau" name="passwordNouveau" placeholder="Nouveau mot de passe" class="form-control here" type="password">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="paswwordConfir" class="col-4 col-form-label">Confirmation du nouveau mot de passe</label> 
+                <div class="col-8">
+                  <input id="passwordConfir" name="passwordConfir" placeholder="Confirmation du nouveau mot de passe" class="form-control here"  required="required" type="password">
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <div class="offset-4 col-8">
+                  <button name="submit" type="submit" class="btn btn-primary">Modifier le mot de passe</button>
+                </div>
+              </div>
+              
+          </form>
+          </div>
+        </div>
+        
+      </div>
+
+      
+
+
+
+
+      </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+    

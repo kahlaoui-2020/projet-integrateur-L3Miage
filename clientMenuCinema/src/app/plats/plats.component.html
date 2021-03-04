@@ -1,0 +1,158 @@
+<div class="container">
+    <div class="input-group input-group-newsletter">
+  
+      <!-- ___________________________________________________________________________________________________________________________________
+      Pour chercher un plat __________________________________________________________________________________________________________________
+      _______________________________________________________________________________________________________________________________________-->
+      <p>
+        <input type="text" [(ngModel)]="text" (ngModelChange)="searchPlat()" (ngModelChange)="getSearchPlats()"
+          class="form-control" placeholder="Rechercher un plat"
+          aria-label="Rechercher un film ou un plat ou un artiste préféré ..." aria-describedby="basic-addon" size="107">
+      </p>
+  
+      <div class="input-group-append">
+        <p>
+          <button class="btn btn-secondary" (click)="afficherRechercheTrue()">Rechercher</button>
+        </p>
+  
+        <div *ngIf="afficherRecherhce == true">
+          <p><button type="submit" class="btn btn-danger text-white" (click)="afficherRechercheFalse()">Fermer la recherche</button></p>
+          <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4" *ngFor="let p of searchPlats">
+              <div style="margin-right: 20px;">
+                <div class="card h-100 text-dark">
+                  <img class="card-img-top" [src]="p.photo" alt="">              
+                  <div class="card-footer">                  
+                    <h6 class="card-title">{{getNomPlat(p)}}</h6>                    
+                    <button class="btn btn-primary stretched-link" (click)="selectPlat(p)"
+                      style="cursor: pointer;">Commander ce plat</button>
+                  </div>
+                </div>
+                <div #container></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+   
+    <!-- ___________________________________________________________________________________________________________________________________
+    Ajout des onglets pour l'affichage _____________________________________________________________________________________________________
+     _______________________________________________________________________________________________________________________________________-->
+  
+      <nav *ngIf="afficherRecherhce == false">
+        <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+          <li class="nav-item">
+            <a class=" nav-link" id="entree-tab" aria-selected="true" href="#entree" data-toggle="tab" role="tab"
+              aria-controls="entree">Entree</a>
+          </li>
+          <li class="nav-item">
+            <a class=" nav-link active" id="plat-tab" aria-selected="false" href="#plat" data-toggle="tab" role="tab"
+              aria-controls="plat">Plat</a>
+          </li>
+          <li class="nav-item">
+            <a class=" nav-link" id="dessert-tab" aria-selected="false" href="#dessert" data-toggle="tab" role="tab"
+              aria-controls="dessert">Dessert</a>
+          </li>
+          <li class="nav-item">
+            <a class="  nav-link" id="boission-tab" aria-selected="false" href="#boisson" data-toggle="tab" role="tab"
+              aria-controls="boisson">Boisson</a>
+          </li>
+        </ul>
+      </nav>
+  
+  
+      <div *ngIf="afficherRecherhce == false" class="tab-content" id="nav-tabContent" style="margin-top: 20px;">
+  
+      <!-- ___________________________________________________________________________________________________________________________________
+      Entree _________________________________________________________________________________________________________________________________
+      _______________________________________________________________________________________________________________________________________-->
+        <div class=" tab-pane fade " id="entree" role="tabpanel" aria-labelledby="nav-entree-tab">
+          <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4" *ngFor="let e of entree">
+              <div style="margin-right: 20px;">
+                <div class="card h-100 text-dark">
+                  <img class="card-img-top" [src]="e.photo" alt="">
+                  <div class="card-footer">
+                    <h6 class="card-title">{{getNomPlat(e)}}</h6>                    
+                    <button (click)="selectPlat(e)" class="btn btn-primary stretched-link"
+                      style="cursor: pointer;">Commander cette entrée</button>
+                  </div>
+                </div>
+                <div #container></div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      <!-- ___________________________________________________________________________________________________________________________________
+      Plat ___________________________________________________________________________________________________________________________________
+      _______________________________________________________________________________________________________________________________________-->
+        <div class=" tab-pane fade show active" id="plat" role="tabpanel" aria-labelledby="nav-plat-tab">
+          <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4" *ngFor="let p of plat">
+              <div style="margin-right: 20px;">
+                <div class="card h-100 text-dark">
+                  <img class="card-img-top" [src]="p.photo" alt="">
+                  <div class="card-img-overlay">
+                    <div class="card-body">
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <h6 class="card-title">{{getNomPlat(p)}}</h6>
+                    <button (click)="selectPlat(p)" class="btn btn-primary stretched-link"
+                      style="cursor: pointer;">Commander ce plat</button>
+                  </div>
+                </div>
+                <div #container></div>
+              </div>
+            </div>
+          </div>
+        </div>    
+  
+      <!-- ___________________________________________________________________________________________________________________________________
+      Dessert ________________________________________________________________________________________________________________________________
+      _______________________________________________________________________________________________________________________________________-->
+      <div class=" tab-pane fade " id="dessert" role="tabpanel" aria-labelledby="nav-dessert-tab">
+        <div class="row text-center">
+          <div class="col-lg-3 col-md-6 mb-4" *ngFor="let d of dessert">
+            <div style="margin-right: 20px;">
+              <div class="card h-100 text-dark">
+                <img class="card-img-top" [src]="d.photo" alt="">
+                <div class="card-footer">
+                  <h6 class="card-title">{{getNomPlat(d)}}</h6>
+                  <button (click)="selectPlat(d)" class="btn btn-primary stretched-link"
+                    style="cursor: pointer;">Commander ce dessert</button>
+                </div>
+              </div>
+              <div #container></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- ___________________________________________________________________________________________________________________________________
+      Boisson ________________________________________________________________________________________________________________________________
+      _______________________________________________________________________________________________________________________________________-->
+        <div *ngIf="afficherRecherhce == false" class=" tab-pane fade " id="boisson" role="tabpanel"
+          aria-labelledby="nav-boisson-tab">
+          <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4" *ngFor="let b of boisson">
+              <div style="margin-right: 20px;">
+                <div class="card h-100 text-dark">
+                  <img class="card-img-top" [src]="b.photo" alt="">
+                  <div class="card-footer">
+                    <h6 class="card-title">{{getNomPlat(b)}}</h6>
+                    <button (click)="selectPlat(b)" class="btn btn-primary stretched-link"
+                      style="cursor: pointer;">Commander ce boisson</button>
+                  </div>
+                </div>
+                <div #container></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>

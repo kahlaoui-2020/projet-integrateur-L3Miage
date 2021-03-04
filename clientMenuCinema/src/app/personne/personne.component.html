@@ -1,0 +1,38 @@
+<div class="container" >
+    <div class="input-group input-group-newsletter">
+      <p>
+        <input type="text" class="form-control" placeholder="Rechercher un artiste" 
+            
+            aria-label="Rechercher un film ou un plat ou un artiste préféré ..." aria-describedby="basic-addon" size="107">
+      </p>
+      <div class="input-group-append">
+        <p>
+            <button class="btn btn-secondary" type="button">Rechercher</button>
+        </p>
+        
+      </div>
+    </div>
+  
+  
+  
+    <div class="row text-center">
+    
+      <div class="col-lg-3 col-md-6 mb-4" *ngFor="let person of personnes; let i = index">
+        <div style="margin-right: 20px;">
+          <div class="card h-100 text-dark" >
+            <img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w500' + person.profile_path" alt=""
+              style="max-height:300px; max-width: 250px;">
+            <div class="card-footer">
+              <h6 class="card-title">{{getPersonName(person)}}</h6>
+              <!-- <button routerLink="/movies" class="btn btn-primary stretched-link" style="cursor: pointer;">Commander ce film</button> -->
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  
+  
+  
+  </div>

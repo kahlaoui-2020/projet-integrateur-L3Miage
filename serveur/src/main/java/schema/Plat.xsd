@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://Classes/Plat"
+           xmlns="http://Classes/Plat"
+           xmlns:ingr="http://Classes/Ingredient"
+           xmlns:tp="http://Classes/TypeDePlat"
+           elementFormDefault="qualified">
+    <xs:import namespace="http://Classes/Ingredient" schemaLocation="Ingredient.xsd"/>
+    <xs:import namespace="http://Classes/TypeDePlat" schemaLocation="TypeDePlat.xsd"/>
+    <xs:element name="plat" type="Plat"/>
+    <xs:complexType name="Plat">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="libelle" type="xs:string"/>
+            <xs:element name="type" type="tp:TypeDePlat"/>
+            <xs:element name="prix" type="xs:double"/>
+            <xs:element name="photo" type="xs:string"/>
+            <xs:element name="ingredients" type="ingr:Ingredient" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        
+    </xs:complexType>
+
+</xs:schema>

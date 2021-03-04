@@ -1,0 +1,49 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a href="#" class="navbar-brand"> 
+            <img src="https://firebasestorage.googleapis.com/v0/b/menucinema-fd117.appspot.com/o/logo.png?alt=media&token=796cb22f-145c-4772-bc4b-0013fc67113a" alt="">
+        </a>
+
+        <app-menu></app-menu>
+          <ul class="navbar-nav">
+            <form class="form-inline mt-2 mt-md-0">
+            <li routerLinkActive="active" *ngIf="!isAuth" >
+                <button routerLink="/login/signup" class="form-control mr-sm-2"><span class="glyphicon glyphicon-user"></span> Créer un compte</button>
+            </li>
+            <li routerLinkActive="active" *ngIf="!isAuth" >
+                <button routerLink="/login/signin" class="form-control mr-sm-2"><span class="glyphicon glyphicon-log-in"></span> Se connecter</button>
+            </li>
+            <li >
+                <button (click)="onSignOut()" *ngIf="isAuth" style="cursor:pointer" class="form-control mr-sm-2">Déconnexion</button>
+            </li>
+            <li>
+                <button routerLink="/sidebar-client"  *ngIf="isAuth" style="cursor:pointer" class="form-control mr-sm-2">Compte client</button>
+            </li>
+        </form>
+        </ul>
+
+          
+    </div>
+</nav>
+
+<div class="container-fluid" >
+    <header class="jumbotron my-4" style="background-image: url('https://image.tmdb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/mn9k8zapebAbCqsiKf24juhXjjx.jpg')"> 
+
+        <h1 class="display-3" style="color:white">BIENVENUE SUR MENUCINEMA</h1>
+        <p class="lead"> Voici les propositions du Jour</p>
+        <a href="#" class="btn btn-primary btn-lg">En savoir plus...</a>
+      </header>
+    
+      
+      
+        
+</div>
+
+
+
+
+
+
+
+

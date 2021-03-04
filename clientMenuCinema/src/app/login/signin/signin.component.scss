@@ -1,0 +1,239 @@
+
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  }
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flex-c-m {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+
+
+
+
+
+
+.p-b-32 {padding-bottom: 32px;}
+.p-t-3 {padding-top: 3px;}
+.p-b-43 {padding-bottom: 43px;}
+.m-r-5 {margin-right: 5px;}
+
+
+
+
+
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+  border: none;
+  
+	//background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+
+/*==================================================================
+
+  /*==================================================================
+ 
+  
+  /*==================================================================
+  [ Background ]*/
+  .bg1 {background: #3b5998;}
+  .bg2 {background: #1da1f2;}
+  .bg3 {background: #cd201f;}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+
+  
+  /*==================================================================
+  [ login more ]*/
+  .login100-more {
+    width: calc(100% - 560px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .login100-more::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.1);
+  }
+  
+  
+  
+  /*==================================================================
+  [ Form ]*/
+  
+  .login100-form {
+    width: 560px;
+    min-height: 100vh;
+    display: block;
+    background-color: #f7f7f7;
+    padding: 173px 55px 55px 55px;
+  }
+  
+  .login100-form-title {
+    width: 100%;
+    display: block;
+    font-family: Poppins-Regular;
+    font-size: 30px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  
+  
+  /*------------------------------------------------------------------
+  [ Input ]*/
+  
+  
+  
+  
+  
+  /*==================================================================
+  [ Restyle Checkbox ]*/
+  
+  
+  
+  /*------------------------------------------------------------------
+  [ Button ]*/
+  .container-login100-form-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  
+  
+  
+  /*------------------------------------------------------------------
+  [ Responsive ]*/
+  
+  @media (max-width: 992px) {
+    .login100-form {
+      width: 50%;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  
+    .login100-more {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login100-form {
+      width: 100%;
+    }
+  
+    .login100-more {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .login100-form {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 70px;
+    }
+  }
+  
+  
+  /*------------------------------------------------------------------
+  
+  
+  
+  
+  /*==================================================================
+  [ Social ]*/
+  .login100-form-social-item {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 50%;
+  }
+  
+  .login100-form-social-item:hover {
+    background: #333333;
+    color: #fff;
+  }
+  
+
+
+
+
+
+

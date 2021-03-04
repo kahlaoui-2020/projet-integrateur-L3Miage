@@ -1,0 +1,214 @@
+
+<!-- <button class="btn-outline-primary mr-2" (click)="open('focusFirst')">
+  <div>Open confirm modal</div>
+  <div class="text-dark" aria-hidden="true"><small>&times; button will be focused</small></div>
+</button>
+<button class="btn-outline-primary mr-2" (click)="open('autofocus')">
+  <div>Open confirm modal with `nbgAutofocus`</div>
+  <div class="text-dark" aria-hidden="true"><small>&times; button will be focused</small></div>
+</button> -->
+
+
+
+<!-- <ng-template #template>
+  <p class="top" style="margin: 30px;">Film ajouté
+      à la commande</p>
+</ng-template> -->
+
+<div class="container" >
+  <div class="input-group input-group-newsletter">
+
+    <!-- ___________________________________________________________________________________________________________________________________
+  Pour chercher un film __________________________________________________________________________________________________________________
+   _______________________________________________________________________________________________________________________________________-->
+   
+      <p>
+        <input type="text" [(ngModel)]="text" (ngModelChange) = "searchFilm()" (ngModelChange)="getSearchFilms()" class="form-control" placeholder="Rechercher un film ou un plat ou un artiste préféré ..." 
+            
+            aria-label="Rechercher un film ou un plat ou un artiste préféré ..." aria-describedby="basic-addon" size="127">
+      </p>
+    
+      <div class="input-group-append">
+        <p>
+            <button class="btn btn-secondary"  (click)="afficherTrue()" (click) = "getSearchFilms()">Rechercher</button>
+        </p>
+  
+    
+
+
+
+      <div  *ngIf="afficher == true"><p><button type="submit" class="btn btn-danger text-white" (click)="onClose()">Fermer la recherche</button></p>
+        <div class="row text-center">
+          <div class="col-lg-3 col-md-6 mb-4" *ngFor="let film of getSearchFilms()">
+            <div style="margin-right: 20px;">
+              <div class="card h-100 text-dark" >
+                <img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w500' + film.poster_path" alt=""
+                  style="max-height:300px; max-width: 250px;">
+                  <div class="card-img-overlay">
+                   
+                  </div>
+                        <div class="card-footer">
+                          <!--img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w500' + film.poster_path" alt=""-->
+                          <h6 class="card-title">{{getFilmTitre(film)}}</h6>
+                          <button class="btn btn-primary stretched-link" (click)="selectFilm(film)"
+                            style="cursor: pointer;" >Commander ce film</button>   
+                            
+                          </div>
+                
+              
+            </div>
+            <!-- <div #container></div> -->
+          </div>
+</div>
+        </div>
+    </div>
+  </div>
+
+
+
+  <nav *ngIf="afficher == false">
+    <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+      <li class="nav-item">
+        <a class=" nav-link active" id="now-tab" aria-selected="true" href="#now"
+          data-toggle="tab"  role="tab" aria-controls="now" >Au cinéma</a>
+      </li>
+      <li class="nav-item">
+        <a class=" nav-link" id="up-tab"  aria-selected="false" href="#up"
+          data-toggle="tab"  role="tab" aria-controls="up" >A venir</a>
+      </li>
+      <li class="nav-item">
+        <a class=" nav-link" id="popular-tab"  aria-selected="false" href="#popular"
+          data-toggle="tab"  role="tab" aria-controls="popular" >Populaires</a>
+      </li>
+      <li class="nav-item"> 
+        <a class="  nav-link " id="movies-tab" aria-selected="false" href="#movies"
+          data-toggle="tab"  role="tab" aria-controls="movies" >Films</a>
+      </li>  
+    </ul>
+  </nav>
+
+  
+   <div *ngIf="afficher == false" class="tab-content" id="nav-tabContent" style="margin-top: 20px;">
+
+     <!-- ___________________________________________________________________________________________________________________________________
+  Au cinema ______________________________________________________________________________________________________________________________
+   _______________________________________________________________________________________________________________________________________-->
+    <div class=" tab-pane fade show active " id="now" role="tabpanel" aria-labelledby="nav-now-tab">
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4" *ngFor="let film of now_playing">
+          <div style="margin-right: 20px;">
+            <div class="card h-100 text-dark">
+              <img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w500' + film.poster_path" alt=""
+                style="max-height:300px; max-width: 250px;">
+              <div class="card-footer">
+                <h6 class="card-title">{{getFilmTitre(film)}}</h6>
+                <button (click)="selectFilm(film)" class="btn btn-primary stretched-link"
+                  style="cursor: pointer;">Commander ce film</button>
+
+              </div>
+
+            </div>
+            <!-- <div #container></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ___________________________________________________________________________________________________________________________________
+  A venir ________________________________________________________________________________________________________________________________
+   _______________________________________________________________________________________________________________________________________-->
+    <div class=" tab-pane fade" id="up" role="tabpanel" aria-labelledby="nav-up-tab">
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4" *ngFor="let film of upComming; let i = index">
+          <div style="margin-right: 20px;">
+            <div class="card h-100 text-dark" >
+              <img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w500' + film.poster_path" alt=""
+                style="max-height:300px; max-width: 250px;">
+                <div class="card-img-overlay">
+                  <div class="card-body">
+                    
+                  </div>
+                </div>
+
+              <div class="card-footer">
+                <h6 class="card-title">{{getFilmTitre(film)}}</h6>
+                <button  (click)="selectFilm(film)"  class="btn btn-primary stretched-link" style="cursor: pointer;" >Commander ce film</button>
+                
+              </div>
+              
+            </div>
+            <!-- <div #container></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ___________________________________________________________________________________________________________________________________
+  Films populaires _______________________________________________________________________________________________________________________
+   _______________________________________________________________________________________________________________________________________-->
+    <div class=" tab-pane fade " id="popular" role="tabpanel" aria-labelledby="nav-popular-tab" >
+      
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4" *ngFor="let film of populars; let i = index">
+          <div style="margin-right: 20px;">
+            <div class="card h-100 text-dark" >
+              <img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w500' + film.poster_path" alt=""
+                style="max-height:300px; max-width: 250px;">
+                <div class="card-img-overlay">
+                  <div class="card-body">
+                    
+                  </div>
+                </div>
+
+              <div class="card-footer">
+                <h6 class="card-title">{{getFilmTitre(film)}}</h6>
+                <button  (click)="selectFilm(film)"  class="btn btn-primary stretched-link" style="cursor: pointer;" >Commander ce film</button>
+                
+              </div>
+              
+            </div>
+            <!-- <div #container></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- ___________________________________________________________________________________________________________________________________
+  Films __________________________________________________________________________________________________________________________________
+   _______________________________________________________________________________________________________________________________________-->
+    <div *ngIf="afficher == false" class=" tab-pane fade " id="movies" role="tabpanel" aria-labelledby="nav-movies-tab">
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4" *ngFor="let film of films; let i = index">
+          <div style="margin-right: 20px;">
+            <div class="card h-100 text-dark" >
+              <img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w500' + film.poster_path" alt=""
+                style="max-height:300px; max-width: 250px;">
+                <div class="card-img-overlay">
+                  <div class="card-body">
+                    <!-- <h4 class="card-title">{{getFilmTitre(film)}}</h4>
+                    <p class="card-text">Année : {{getFilmDate(film)}}</p>
+                    <p class="card-text">Genre : {{getFilmGenre(film)}}</p>
+                    <p class="card-text">Temps: {{getFilmTime(film)}} min</p>  -->
+                  </div>
+                </div>
+
+              <div class="card-footer">
+                <h6 class="card-title">{{getFilmTitre(film)}}</h6>
+                <button  (click)="selectFilm(film)"  class="btn btn-primary stretched-link" style="cursor: pointer;" >Commander ce film</button>
+                
+              </div>
+              
+            </div>
+            <!-- <div #container></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    </div> 
+  </div>
+
+  
+
+
+
+  <!--  #anchor  (click)="togglePopup(anchor, template)" -->
+  

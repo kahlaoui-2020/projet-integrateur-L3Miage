@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://Classes/Ingredient"
+           xmlns="http://Classes/Ingredient"
+           elementFormDefault="qualified">
+    <xs:element name="ingredient" type="Ingredient"/>
+    <xs:simpleType name="Ingredient">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Riz"/>
+            <xs:enumeration value="Coeur de laitue"/>
+            <xs:enumeration value="Crouton de pain"/>
+            <xs:enumeration value="Poulet"/>
+            <xs:enumeration value="Parmesan"/>
+            <xs:enumeration value="Saumon"/>
+            <xs:enumeration value="Fromage"/>
+            <xs:enumeration value="Moutarde"/>
+            <xs:enumeration value="Saucisse de poulet"/>
+            <xs:enumeration value="Jus de citron"/>
+            <xs:enumeration value="Escalope de poulet"/>
+            <xs:enumeration value="Brocolis"/>
+            <xs:enumeration value="Poivrons rouges"/>
+            <xs:enumeration value="Poivrons jauges"/>
+            <xs:enumeration value="Ciboulette"/>
+            <xs:enumeration value="Huile d'olive"/>
+            <xs:enumeration value="Sel"/>
+            <xs:enumeration value="Jambono de Parme"/>
+            <xs:enumeration value="Pain Burger"/>
+            <xs:enumeration value="Salade"/>
+            <xs:enumeration value="Concombre"/>
+            <xs:enumeration value="Mayonnaise"/>
+            <xs:enumeration value="Oignons"/>           
+            <xs:enumeration value="Tomate"/>
+            <xs:enumeration value="Steak"/>
+            <xs:enumeration value="Pommes de terre"/>
+            <xs:enumeration value="Huile"/>  
+            <xs:enumeration value="Paprika"/> 
+            <xs:enumeration value="Spaghetti"/> 
+            <xs:enumeration value="Sauce Tomate"/> 
+            <xs:enumeration value="Lardons"/> 
+            <xs:enumeration value="Jaune d'oeuf"/> 
+            <xs:enumeration value="Pates Lasagnes"/>
+            <xs:enumeration value="Olives"/>
+            <xs:enumeration value="Basilic"/>  
+            <xs:enumeration value="Blanc de poulet"/> 
+            <xs:enumeration value="Poivrons"/> 
+            <xs:enumeration value="Pommes"/> 
+            <xs:enumeration value="Kiwi"/> 
+            <xs:enumeration value="Banane"/> 
+            <xs:enumeration value="Thon"/>
+            <xs:enumeration value="Chocolat"/>  
+            <xs:enumeration value="Poisson"/> 
+            <xs:enumeration value="Miel"/> 
+            <xs:enumeration value="Sauce soya"/> 
+            <xs:enumeration value="Lait"/> 
+            <xs:enumeration value="Oeufs"/> 
+            <xs:enumeration value="Poivron"/> 
+            <xs:enumeration value="Caramelle"/> 
+            <xs:enumeration value="Fraise"/>
+            <xs:enumeration value="Farine"/>
+            <xs:enumeration value="Beurre"/>
+            <xs:enumeration value="Sucre"/>
+            <xs:enumeration value="Sucre roux"/> 
+            <xs:enumeration value="Noix"/> 
+            <xs:enumeration value="Chocolat Blanc"/> 
+            <xs:enumeration value="Mascapone"/> 
+            <xs:enumeration value="Philadelphia"/> 
+            <xs:enumeration value="Limonade"/> 
+            <xs:enumeration value="Menthe"/> 
+            <xs:enumeration value="Citron"/> 
+            <xs:enumeration value="Sirop de peche"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

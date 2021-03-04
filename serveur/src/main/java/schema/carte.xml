@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<ns1:carte
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:ns1='http://Classes/Carte'
+    xmlns:ns2='http://Classes/Plat'
+    xsi:schemaLocation='http://Classes/Carte file:/home/kahlaoui/projet-integrateur-l3m-2020/serveur/src/main/java/schema/Carte.xsd'>
+    <ns1:plat>
+        <ns2:id>103</ns2:id>
+        <ns2:libelle>Thon avec mozza</ns2:libelle>
+        <ns2:type>Entree</ns2:type>
+        <ns2:prix>10.3</ns2:prix>
+        <ns2:photo>https://thumbs.dreamstime.com/b/salade-avec-le-thon-les-tomates-la-pomme-de-terre-et-l-oignon-46228278.jpg</ns2:photo>
+        <ns2:ingredients>Thon</ns2:ingredients>
+        <ns2:ingredients>Tomate</ns2:ingredients>
+        <ns2:ingredients>Mozzarella</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>1</ns2:id>
+        <ns2:libelle>Salade Nicoise</ns2:libelle>
+        <ns2:type>Entree</ns2:type>
+        <ns2:prix>6</ns2:prix>
+        <ns2:photo>https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2F82618bc5-8fde-438c-b931-2898bf6fd0c7.2Ejpeg/750x562/quality/80/crop-from/center/cr/wqkgSGFsbGV0L1N1Y3LDqSBzYWzDqSAvIEN1aXNpbmUgQWN0dWVsbGU%3D/salade-nicoise-express.jpeg</ns2:photo>
+        <ns2:ingredients>Riz</ns2:ingredients>
+        <ns2:ingredients>Tomate</ns2:ingredients>
+        <ns2:ingredients>Oeufs</ns2:ingredients>
+        <ns2:ingredients>Thon</ns2:ingredients>
+        <ns2:ingredients>Oignons</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>2</ns2:id>
+        <ns2:libelle>Salade Cesar</ns2:libelle>
+        <ns2:type>Entree</ns2:type>
+        <ns2:prix>8</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20190704/94709_w1024h768c1cx3000cy2000cxt0cyt0cxb6000cyb4000.jpg</ns2:photo>
+        <ns2:ingredients>Coeur de laitue</ns2:ingredients>
+        <ns2:ingredients>Crouton de pain</ns2:ingredients>
+        <ns2:ingredients>Oeufs</ns2:ingredients>
+        <ns2:ingredients>Poulet</ns2:ingredients>
+        <ns2:ingredients>Parmesan</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>3</ns2:id>
+        <ns2:libelle> Roulés au saumon </ns2:libelle>
+        <ns2:type>Entree</ns2:type>
+        <ns2:prix>6</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20160621/9811_w350h250c1cx1872cy2808.jpg</ns2:photo>
+        <ns2:ingredients>Saumon</ns2:ingredients>
+        <ns2:ingredients>Oeufs</ns2:ingredients>
+        <ns2:ingredients>Fromage</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>4</ns2:id>
+        <ns2:libelle>Roulés de saucisse</ns2:libelle>
+        <ns2:type>Entree</ns2:type>
+        <ns2:prix>12</ns2:prix>  
+        <ns2:photo>https://static.750g.com/images/240-240/0d44ff6203bf6b0b7e1de071c8207b97/roule-de-saucisses.jpeg</ns2:photo>
+        <ns2:ingredients>Moutarde</ns2:ingredients>
+        <ns2:ingredients>Oeufs</ns2:ingredients>
+        <ns2:ingredients>Saucisse de poulet</ns2:ingredients>
+    </ns1:plat>      
+    <ns1:plat>
+        <ns2:id>5</ns2:id>
+        <ns2:libelle>Salade Nicoise</ns2:libelle>
+        <ns2:type>Entree</ns2:type>
+        <ns2:prix>6</ns2:prix>  
+        <ns2:photo>https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Nizza-Salat_an_der_F_Mittelmeerk%C3%BCste.JPG/1200px-Nizza-Salat_an_der_F_Mittelmeerk%C3%BCste.JPG</ns2:photo>
+        <ns2:ingredients>Riz</ns2:ingredients>
+        <ns2:ingredients>Tomate</ns2:ingredients>
+        <ns2:ingredients>Oeufs</ns2:ingredients>
+        <ns2:ingredients>Thon</ns2:ingredients>
+        <ns2:ingredients>Oignons</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>6</ns2:id>
+        <ns2:libelle>Tomates Farcies</ns2:libelle>
+        <ns2:type>Entree</ns2:type>
+        <ns2:prix>11</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20161122/63206_w648h414c1cx1333cy1000.jpg</ns2:photo>
+        <ns2:ingredients>Jus de citron</ns2:ingredients>
+        <ns2:ingredients>Tomate</ns2:ingredients>
+        <ns2:ingredients>Thon</ns2:ingredients>
+        <ns2:ingredients>Oignons</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>7</ns2:id>
+        <ns2:libelle>Salade Chinoise</ns2:libelle>
+        <ns2:type>Entree</ns2:type>
+        <ns2:prix>6</ns2:prix>
+        <ns2:photo>https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2F0dbc4025-d538-44d1-8afc-35519f41be92.2Ejpeg/750x562/quality/80/crop-from/center/cr/wqkgTWFyaWVsbGUvU3VjcsOpIHNhbMOpIC8gQ3Vpc2luZSBBY3R1ZWxsZQ%3D%3D/salade-chinoise-au-poulet.jpeg</ns2:photo>
+        <ns2:ingredients>Escalope de poulet</ns2:ingredients>
+        <ns2:ingredients>Brocolis</ns2:ingredients>
+        <ns2:ingredients>Poivrons rouges</ns2:ingredients>
+        <ns2:ingredients>Poivrons jauges</ns2:ingredients>
+        <ns2:ingredients>Oignons</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>8</ns2:id>
+        <ns2:libelle>Fèves fraiches</ns2:libelle>
+        <ns2:type>Entree</ns2:type>
+        <ns2:prix>6</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20190612/93794_w648h414c1cx1107cy2033cxt0cyt0cxb2592cyb3872.jpg</ns2:photo>
+        <ns2:ingredients>Tomate</ns2:ingredients>
+        <ns2:ingredients>Ciboulette</ns2:ingredients>
+        <ns2:ingredients>Huile d'olive</ns2:ingredients>
+        <ns2:ingredients>Sel</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>9</ns2:id>
+        <ns2:libelle>Tomates Fraiches</ns2:libelle>
+        <ns2:type>Entree</ns2:type>
+        <ns2:prix>6</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20170531/47505_w648h414c1cx2592cy1728.jpg</ns2:photo>
+        <ns2:ingredients>Tomate</ns2:ingredients>
+
+        <ns2:ingredients>Thon</ns2:ingredients>
+        <ns2:ingredients>Jambono de Parme</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>10</ns2:id>
+        <ns2:libelle>Chicken burger </ns2:libelle>
+        <ns2:type>Plat</ns2:type>
+        <ns2:prix>13</ns2:prix>
+        <ns2:photo>https://i.pinimg.com/736x/98/29/ee/9829ee3be375d4cd36f9d0a0541f0a66.jpg</ns2:photo>
+        <ns2:ingredients>Pain Burger</ns2:ingredients>
+        <ns2:ingredients>Tomate</ns2:ingredients>
+        <ns2:ingredients>Salade</ns2:ingredients>
+        <ns2:ingredients>Concombre</ns2:ingredients>
+        <ns2:ingredients>Mayonnaise</ns2:ingredients>
+        <ns2:ingredients>Poulet</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>11</ns2:id>
+        <ns2:libelle>Hamburger</ns2:libelle>
+        <ns2:type>Plat</ns2:type>
+        <ns2:prix>10</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20130627/42230_w1024h768c1cx1250cy1875.jpg</ns2:photo>
+        <ns2:ingredients>Pain Burger</ns2:ingredients>
+        <ns2:ingredients>Tomate</ns2:ingredients>
+        <ns2:ingredients>Salade</ns2:ingredients>
+        <ns2:ingredients>Concombre</ns2:ingredients>
+        <ns2:ingredients>Mayonnaise</ns2:ingredients>
+        <ns2:ingredients>Oignons</ns2:ingredients>
+        <ns2:ingredients>Steak</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>12</ns2:id>
+        <ns2:libelle>Frites</ns2:libelle>
+        <ns2:type>Plat</ns2:type>
+        <ns2:prix>5</ns2:prix>
+        <ns2:photo>https://img.cuisineaz.com/400x320/2016-07-26/i24806-frites-a-la-friteuse.jpg</ns2:photo>
+        <ns2:ingredients>Pommes de terre</ns2:ingredients>
+        <ns2:ingredients>Huile</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>13</ns2:id>
+        <ns2:libelle>Potatoes</ns2:libelle>
+        <ns2:type>Plat</ns2:type>
+        <ns2:prix>5</ns2:prix>
+        <ns2:photo>https://img-3.journaldesfemmes.fr/vXV8sW4wVvSgJEbdWaQrTn-YySo=/750x/smart/e6861ce829454b988c96bdbf26cdcace/recipe-jdf/10026721.jpg</ns2:photo>
+        <ns2:ingredients>Pommes de terre</ns2:ingredients>
+        <ns2:ingredients>Huile</ns2:ingredients>
+        <ns2:ingredients>Paprika</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>14</ns2:id>
+        <ns2:libelle>Spaghetti Bolognaise</ns2:libelle>
+        <ns2:type>Plat</ns2:type>
+        <ns2:prix>10.3</ns2:prix>
+        <ns2:photo>https://img.cuisineaz.com/610x610/2013-12-20/i71303-recette-pate-spaghettis-bolognaise-maison.jpg </ns2:photo>
+        <ns2:ingredients>Spaghetti</ns2:ingredients>
+        <ns2:ingredients>Sauce Tomate</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>15</ns2:id>
+        <ns2:libelle>Spaghetti carbonara</ns2:libelle>
+        <ns2:type>Plat</ns2:type>
+        <ns2:prix>10</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20181031/83533_w1024h768c1cx1746cy2327cxt0cyt0cxb3490cyb4655.jpg</ns2:photo>
+        <ns2:ingredients>Spaghetti</ns2:ingredients>
+        <ns2:ingredients>Lardons</ns2:ingredients>
+        <ns2:ingredients>Jaune d'oeuf</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>16</ns2:id>
+        <ns2:libelle>Lasagne</ns2:libelle>
+        <ns2:type>Plat</ns2:type>
+        <ns2:prix>10</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20180119/76936_w1024h768c1cx2680cy1786cxt0cyt0cxb5361cyb3573.jpg</ns2:photo>
+        <ns2:ingredients>Sauce Tomate</ns2:ingredients>
+        <ns2:ingredients>Pates Lasagnes</ns2:ingredients>
+        <ns2:ingredients>Parmesan</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>17</ns2:id>
+        <ns2:libelle>Pizza margherita</ns2:libelle>
+        <ns2:type>Plat</ns2:type>
+        <ns2:prix>9</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20200206/107152_w1024h768c1cx176cy267cxt0cyt0cxb353cyb535.png</ns2:photo>
+        <ns2:ingredients>Sauce Tomate</ns2:ingredients>
+        <ns2:ingredients>Mozzarella</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>18</ns2:id>
+        <ns2:libelle>Pizza Thon</ns2:libelle>
+        <ns2:type>Plat</ns2:type>
+        <ns2:prix>10</ns2:prix>
+        <ns2:photo>https://img.cuisineaz.com/610x610/2013-12-20/i387-pizza-thon.jpeg</ns2:photo>
+        <ns2:ingredients>Thon</ns2:ingredients>
+        <ns2:ingredients>Sauce Tomate</ns2:ingredients>
+        <ns2:ingredients>Mozzarella</ns2:ingredients>
+        <ns2:ingredients>Olives</ns2:ingredients>
+        <ns2:ingredients>Basilic</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>19</ns2:id>
+        <ns2:libelle>Croque Monsieur</ns2:libelle>
+        <ns2:type>Plat</ns2:type>
+        <ns2:prix>8</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20170112/28965_w1024h768c1cx1500cy1000.jpg</ns2:photo>
+        <ns2:ingredients>Blanc de poulet</ns2:ingredients>
+        <ns2:ingredients>Tomate</ns2:ingredients>
+        <ns2:ingredients>Fromage</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>20</ns2:id>
+        <ns2:libelle>Poulet basquaise</ns2:libelle>
+        <ns2:type>Plat</ns2:type>
+        <ns2:prix>8</ns2:prix>
+        <ns2:photo>https://img.cuisineaz.com/610x610/2017-07-17/i130782-poulet-basquaise-au-cookeo.jpeg</ns2:photo>
+        <ns2:ingredients>Poulet</ns2:ingredients>
+        <ns2:ingredients>Sauce Tomate</ns2:ingredients>
+        <ns2:ingredients>Poivrons</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>21</ns2:id>
+        <ns2:libelle>Salade de fruits</ns2:libelle>
+        <ns2:type>Dessert</ns2:type>
+        <ns2:prix>6</ns2:prix>
+        <ns2:photo>https://img.cuisineaz.com/610x610/2013-12-20/i101039-salade-de-fruits-au-yaourt.jpg</ns2:photo>
+        <ns2:ingredients>Jus de citron</ns2:ingredients>
+        <ns2:ingredients>Pommes</ns2:ingredients>
+        <ns2:ingredients>Kiwi</ns2:ingredients>
+        <ns2:ingredients>Banane</ns2:ingredients>
+        <ns2:ingredients>Fraise</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>22</ns2:id>
+        <ns2:libelle>Fondants au chocolat</ns2:libelle>
+        <ns2:type>Dessert</ns2:type>
+        <ns2:prix>10</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20160610/21702_w648h414c1cx2135cy3776cxt0cyt0cxb4000cyb6000.jpg</ns2:photo>
+        <ns2:ingredients>Farine</ns2:ingredients>
+        <ns2:ingredients>Oeufs</ns2:ingredients>
+        <ns2:ingredients>Beurre</ns2:ingredients>
+        <ns2:ingredients>Chocolat</ns2:ingredients>
+        <ns2:ingredients>Sucre</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>23</ns2:id>
+        <ns2:libelle>Mousse au chocolat</ns2:libelle>
+        <ns2:type>Dessert</ns2:type>
+        <ns2:prix>8</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20181227/85143_w648h414c1cx240cy168cxt0cyt0cxb480cyb337.jpg</ns2:photo>
+        <ns2:ingredients>Oeufs</ns2:ingredients>
+        <ns2:ingredients>Beurre</ns2:ingredients>
+        <ns2:ingredients>Chocolat</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>24</ns2:id>
+        <ns2:libelle>Crème brulée</ns2:libelle>
+        <ns2:type>Dessert</ns2:type>
+        <ns2:prix>10</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20161201/4190_w1024h768c1cx2705cy1803.jpg</ns2:photo>
+        <ns2:ingredients>Jaune d'oeuf</ns2:ingredients>
+        <ns2:ingredients>Lait</ns2:ingredients>
+        <ns2:ingredients>Sucre</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>25</ns2:id>
+        <ns2:libelle>Panna cota</ns2:libelle>
+        <ns2:type>Dessert</ns2:type>
+        <ns2:prix>9</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20170905/71705_w1024h768c1cx1411cy4176cxt0cyt0cxb3999cyb6000.jpg</ns2:photo>
+        <ns2:ingredients>Jaune d'oeuf</ns2:ingredients>
+        <ns2:ingredients>Lait</ns2:ingredients>
+        <ns2:ingredients>Sucre</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>26</ns2:id>
+        <ns2:libelle>Crepes</ns2:libelle>
+        <ns2:type>Dessert</ns2:type>
+        <ns2:prix>10</ns2:prix>
+        <ns2:photo>https://img-3.journaldesfemmes.fr/nRH0FhvU75eTlwoseA8E04j61Fc=/750x/smart/a5181741d55b4b3d8b54bda593ff87f5/recipe-jdf/10021667.jpg</ns2:photo>
+        <ns2:ingredients>Oeufs</ns2:ingredients>
+        <ns2:ingredients>Lait</ns2:ingredients>
+        <ns2:ingredients>Farine</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>27</ns2:id>
+        <ns2:libelle>Carot Cake</ns2:libelle>
+        <ns2:type>Dessert</ns2:type>
+        <ns2:prix>9</ns2:prix>
+        <ns2:photo>https://static.750g.com/images/1200-630/97a1b88a295545d93666841ed592dc21/carrot-cake-comme-chez-starbucks.jpg</ns2:photo>
+        <ns2:ingredients>Farine</ns2:ingredients>
+        <ns2:ingredients>Huile</ns2:ingredients>
+        <ns2:ingredients>Sucre roux</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>28</ns2:id>
+        <ns2:libelle>Brownie</ns2:libelle>
+        <ns2:type>Dessert</ns2:type>
+        <ns2:prix>10</ns2:prix>
+        <ns2:photo>https://i.ytimg.com/vi/Biibg4EVOew/maxresdefault.jpg</ns2:photo>
+        <ns2:ingredients>Farine</ns2:ingredients>
+        <ns2:ingredients>Noix</ns2:ingredients>
+        <ns2:ingredients>Beurre</ns2:ingredients>
+        <ns2:ingredients>Chocolat</ns2:ingredients>
+        <ns2:ingredients>Sucre</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>29</ns2:id>
+        <ns2:libelle>CheeseCake oréo</ns2:libelle>
+        <ns2:type>Dessert</ns2:type>
+        <ns2:prix>10</ns2:prix>
+        <ns2:photo>https://www.recette360.com/wp-content/uploads/2019/12/Cheesecake-Oreo-au-mascarpone-au-thermomix.jpg</ns2:photo>
+        <ns2:ingredients>Chocolat Blanc</ns2:ingredients>
+        <ns2:ingredients>Mascapone</ns2:ingredients>
+        <ns2:ingredients>Philadelphia</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>30</ns2:id>
+        <ns2:libelle>Magnum</ns2:libelle>
+        <ns2:type>Dessert</ns2:type>
+        <ns2:prix>10</ns2:prix>
+        <ns2:photo>https://www.magnumicecream.com/content/dam/unilever/magnum/global/active_in-use_products_/product_only/all/all/magnum_almond_product_shot-1098495-jpg.jpg</ns2:photo>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>31</ns2:id>
+        <ns2:libelle>Coca Cola</ns2:libelle>
+        <ns2:type>Boisson</ns2:type>
+        <ns2:prix>1.5</ns2:prix>
+        <ns2:photo>https://www.magasin-stalingrad.com/Files/112063/Img/04/coca-cola-classique-boite-slim-33-cl-ref8000048-FR-PIM-396651001002-03-zoom.jpg </ns2:photo>  
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>32</ns2:id>
+        <ns2:libelle>Coca Cherry</ns2:libelle>
+        <ns2:type>Boisson</ns2:type>
+        <ns2:prix>1.5</ns2:prix>
+        <ns2:photo>https://www.staples.fr/content/images/product/15717-00H_1_xnl.jpg</ns2:photo>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>33</ns2:id>
+        <ns2:libelle>Eau</ns2:libelle>
+        <ns2:type>Boisson</ns2:type>
+        <ns2:prix>1.5</ns2:prix>
+        <ns2:photo>https://www.cdiscount.com/pdt2/0/2/8/1/700x700/cri3701018022028/rw/cristaline-50cl-pack-de-24.jpg</ns2:photo>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>34</ns2:id>
+        <ns2:libelle>Vin blanc</ns2:libelle>
+        <ns2:type>Boisson</ns2:type>
+        <ns2:prix>5</ns2:prix>
+        <ns2:photo>https://www.domaine-labarthe.com/248-large_default/vin-blanc-sec-chardonnay-cotes-de-thongue-igp-domaine-de-montrose.jpg</ns2:photo>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>35</ns2:id>
+        <ns2:libelle>Jus de pomme</ns2:libelle>
+        <ns2:type>Boisson</ns2:type>
+        <ns2:prix>2</ns2:prix>
+        <ns2:photo>https://www.jpg.fr/content/images/product/16692-00J_1_xnl.jpg</ns2:photo>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>36</ns2:id>
+        <ns2:libelle>Jus d'orange avec pulpe</ns2:libelle>
+        <ns2:type>Boisson</ns2:type>
+        <ns2:prix>2</ns2:prix>
+        <ns2:photo>https://www.jpg.fr/content/images/product/16582-00J_1_xnl.jpg</ns2:photo>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>37</ns2:id>
+        <ns2:libelle>Virgin Morito</ns2:libelle>
+        <ns2:type>Boisson</ns2:type>
+        <ns2:prix>3</ns2:prix>
+        <ns2:photo>https://assets.afcdn.com/recipe/20180801/81659_w648h344c1cx2774cy1849cxt0cyt0cxb5541cyb3691.jpg</ns2:photo>
+        <ns2:ingredients>Limonade</ns2:ingredients>
+        <ns2:ingredients>Menthe</ns2:ingredients>
+        <ns2:ingredients>Citron</ns2:ingredients>
+        <ns2:ingredients>Sirop de peche</ns2:ingredients>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>38</ns2:id>
+        <ns2:libelle>Oasis Tropical</ns2:libelle>
+        <ns2:type>Boisson</ns2:type>
+        <ns2:prix>1.3</ns2:prix>
+        <ns2:photo>https://media.traiteur.carrefour.fr/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/b/o/boisson_tropical_oasis_carrefour_traiteur.png</ns2:photo>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>39</ns2:id>
+        <ns2:libelle>Icetea</ns2:libelle>
+        <ns2:type>Boisson</ns2:type>
+        <ns2:prix>1.5</ns2:prix>
+        <ns2:photo>https://shop.countdown.co.nz/Content/ProductImages/large/9310021039035.jpg/Lipton-Ice-Tea-Peach-bottle-500ml.jpg</ns2:photo>
+    </ns1:plat>
+    <ns1:plat>
+        <ns2:id>40</ns2:id>
+        <ns2:libelle>Schweppes Agrumes</ns2:libelle>
+        <ns2:type>Boisson</ns2:type>
+        <ns2:prix>10.3</ns2:prix>
+        <ns2:photo>https://www.clicmarket.fr/4471-large_default/24-canettes-de-schweppes-agrumes-24-x-33-cl.jpg</ns2:photo>
+    </ns1:plat>
+</ns1:carte>

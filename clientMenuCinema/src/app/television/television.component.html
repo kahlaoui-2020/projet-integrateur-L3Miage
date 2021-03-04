@@ -1,0 +1,136 @@
+<div class="container">
+    <div class="input-group input-group-newsletter">
+  
+    <!-- ___________________________________________________________________________________________________________________________________
+    Pour chercher un TV ____________________________________________________________________________________________________________________
+     _______________________________________________________________________________________________________________________________________-->
+      <p>
+        <input type="text" [(ngModel)]="text" (ngModelChange)="searchTV()" (ngModelChange)="getSearchTV()"
+          class="form-control" placeholder="Rechercher un TV"
+          aria-label="Rechercher un film ou un plat ou un artiste préféré ..." aria-describedby="basic-addon" size="107">
+      </p>
+  
+      <div class="input-group-append">
+        <p>
+          <button class="btn btn-secondary" (click)="afficherTrue()" (click)="getSearchTV()">Rechercher</button>
+        </p>
+  
+        <div *ngIf="afficher == true">
+          <p><button type="submit" class="btn btn-danger text-white" (click)="onClose()">Fermer la recherche</button></p>
+          <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4" *ngFor="let tele of getSearchTV()">
+              <div style="margin-right: 20px;">
+                <div class="card h-100 text-dark">
+                  <img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w500' + tele.poster_path" alt=""
+                    style="max-height:300px; max-width: 250px;">              
+                  <div class="card-footer">                  
+                    <h6 class="card-title">{{getTvName(tele)}}</h6>
+                    <button class="btn btn-primary stretched-link" (click)="selectTV(tele)"
+                      style="cursor: pointer;">Commander ce TV</button>
+  
+                  </div>
+  
+  
+                </div>
+                <div #container></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    <!-- ___________________________________________________________________________________________________________________________________
+    Ajout des onglets pour l'affichage _____________________________________________________________________________________________________
+     _______________________________________________________________________________________________________________________________________-->
+  
+      <nav *ngIf="afficher == false">
+        <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+          <li class="nav-item">
+            <a class=" nav-link active" id="now-tab" aria-selected="true" href="#now" data-toggle="tab" role="tab"
+              aria-controls="now">On the air</a>
+          </li>          
+          <li class="nav-item">
+            <a class=" nav-link" id="popular-tab" aria-selected="false" href="#popular" data-toggle="tab" role="tab"
+              aria-controls="popular">Populaires</a>
+          </li>
+          <li class="nav-item">
+            <a class="  nav-link" id="tv-tab" aria-selected="false" href="#tv" data-toggle="tab" role="tab"
+              aria-controls="movies">TV</a>
+          </li>
+        </ul>
+      </nav>
+  
+  
+      <div *ngIf="afficher == false" class="tab-content" id="nav-tabContent" style="margin-top: 20px;">
+  
+    <!-- ___________________________________________________________________________________________________________________________________
+    On the air _____________________________________________________________________________________________________________________________
+     _______________________________________________________________________________________________________________________________________-->
+        <div class=" tab-pane fade show active " id="now" role="tabpanel" aria-labelledby="nav-now-tab">
+          <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4" *ngFor="let tele of now_playing">
+              <div style="margin-right: 20px;">
+                <div class="card h-100 text-dark">
+                  <img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w500' + tele.poster_path" alt=""
+                    style="max-height:300px; max-width: 250px;">
+                  <div class="card-footer">
+                    <h6 class="card-title">{{getTvName(tele)}}</h6>
+                    <button (click)="selectTV(tele)" class="btn btn-primary stretched-link"
+                      style="cursor: pointer;">Commander ce film</button>
+  
+                  </div>
+  
+                </div>
+                <div #container></div>
+              </div>
+            </div>
+          </div>
+        </div>      
+  
+    <!-- ___________________________________________________________________________________________________________________________________
+    TV populaires _______________________________________________________________________________________________________________________
+     _______________________________________________________________________________________________________________________________________-->
+      <div class=" tab-pane fade " id="popular" role="tabpanel" aria-labelledby="nav-popular-tab">
+        <div class="row text-center">
+          <div class="col-lg-3 col-md-6 mb-4" *ngFor="let tele of populars; let i = index">
+            <div style="margin-right: 20px;">
+              <div class="card h-100 text-dark">
+                <img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w500' + tele.poster_path" alt=""
+                  style="max-height:300px; max-width: 250px;">
+                <div class="card-footer">
+                  <h6 class="card-title">{{getTvName(tele)}}</h6>
+                  <button (click)="selectTV(tele)" class="btn btn-primary stretched-link"
+                    style="cursor: pointer;">Commander ce film</button>
+                </div>
+              </div>
+              <div #container></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    <!-- ___________________________________________________________________________________________________________________________________
+    TV __________________________________________________________________________________________________________________________________
+     _______________________________________________________________________________________________________________________________________-->
+        <div *ngIf="afficher == false" class=" tab-pane fade " id="tv" role="tabpanel"
+          aria-labelledby="nav-movies-tab">
+          <div class="row text-center">
+            <div class="col-lg-3 col-md-6 mb-4" *ngFor="let tele of television; let i = index">
+              <div style="margin-right: 20px;">
+                <div class="card h-100 text-dark">
+                  <img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w500' + tele.poster_path" alt=""
+                    style="max-height:300px; max-width: 250px;">
+                  <div class="card-footer">
+                    <h6 class="card-title">{{getTvName(tele)}}</h6>
+                    <button (click)="selectTV(tele)" class="btn btn-primary stretched-link"
+                      style="cursor: pointer;">Commander ce film</button>
+                  </div>
+                </div>
+                <div #container></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
