@@ -4,17 +4,8 @@
 
 export const environment = {
   production: false,
-  tmdbKey: 'f8a206c8db4852564f4020b0342a8bdb',
-  firebase : {
-    apiKey: "AIzaSyBCEM2PkW9y4tI0jMB0N2iehMmbT_7apeY",
-    authDomain: "menucinema-fd117.firebaseapp.com",
-    databaseURL: "https://menucinema-fd117.firebaseio.com",
-    projectId: "menucinema-fd117",
-    storageBucket: "menucinema-fd117.appspot.com",
-    messagingSenderId: "838892627178",
-    appId: "1:838892627178:web:225dd5af3fb7e3c4086393",
-    measurementId: "G-XYWPKQM9WN"
-  }
+  tmdbKey: '',
+  firebase : {}
 };
 
 /*
