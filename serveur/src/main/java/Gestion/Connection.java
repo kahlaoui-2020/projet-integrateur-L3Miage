@@ -18,9 +18,9 @@ import java.util.logging.Logger;
  */
 public class Connection {
     
-    private String URL="jdbc:oracle:thin:@im2ag-oracle.e.ujf-grenoble.fr:1521:im2ag" ;
-    private String USER="galmamim";
-    private String PASSWD="cQmdUU9KBJ"; 
+    private String URL="j" ;
+    private String USER="";
+    private String PASSWD=""; 
     private static java.sql.Connection connect;
     
     public void Connexion(){
